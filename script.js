@@ -24,12 +24,14 @@ input.addEventListener("input", (e) => {
   }
 });
 
+// form submit cleanup
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   alert(`You submitted ${input.value}`);
   input.value = "";
 });
 
+// disable submit button on initial load if input value is empty
 document.addEventListener("DOMContentLoaded", () => {
   !input.value.trim().length && submit.setAttribute("disabled", "");
 });
