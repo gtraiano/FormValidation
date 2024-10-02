@@ -42,3 +42,8 @@ form.addEventListener("submit", onSubmit);
 document.addEventListener("DOMContentLoaded", () => {
   !input.value.trim().length && submit.setAttribute("disabled", "");
 });
+
+// disable form submit
+document.addEventListener("submit", e => {
+  !input.value.trim().length && submit.setAttribute("disabled", "");
+});
